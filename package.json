@@ -1,0 +1,15 @@
+{
+  "name": "fetch-youtubers",
+  "version": "1.0.0",
+  "description": "A fetch test with youtube v3 API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Fetch",
+    "youtubev3"
+  ],
+  "author": "",
+  "license": "MIT"
+}
