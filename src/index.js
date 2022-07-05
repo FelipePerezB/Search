@@ -29,6 +29,7 @@ const getChannel = async (channel) =>{
     try {
         const response = await fetchData(API, options)
         const items = response.items.filter((item)=>item.id.kind=="youtube#channel")
+        channelContainer.innerHTML=""
         const finalItems = []
         if(items.length>0){
             const orderedItems = items.sort()
