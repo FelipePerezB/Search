@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta translate="yes"/>
     <meta charset="UTF-8" />
+    <meta name="description" content="Fetch the last videos of the youtuber" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fetch Youtuber</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <main>
-        <h1>SEARCH THE CHANNEL</h1>
+        <label for="search-input"><h1>SEARCH THE CHANNEL</h1></label>
         <div class="search-container">
           <div class="search">
               <input id="search-input" type="text">
@@ -17,6 +19,6 @@
           <div id="channels-container"></div>
         </div>
     </main>
-    <script type="module" src="./index.js"></script>
+    <script defer type="module" src="./index.js"></script>
   </body>
 </html>

@@ -6,8 +6,6 @@ const channelDescription = document.getElementById("description")
 const channelBanner = document.getElementById("banner")
 const channelSubsCount = document.getElementById("subs")
 
-const channelContainer = document.getElementById("channels-container")
-
 const options = {
 	method: 'GET',
 	headers: {
@@ -20,7 +18,7 @@ const showVideos = (videos) =>{
     videos.forEach(video => {
         videosContainer.innerHTML+=
         `<a href=https://www.youtube.com/watch?v=${video.id.videoId}>
-          <img src="${video.snippet.thumbnails.medium.url}">
+          <img alt="Thumbnails of ${video.snippet.title}" width="320" height="180" src="${video.snippet.thumbnails.medium.url}">
           <p>${video.snippet.title}</p>
         </a>`
     });    
@@ -41,6 +39,8 @@ const getDescription = async (channelId) =>{
         channelName.innerText=information.channel.title
         channelDescription.innerText=information.channel.description
         channelBanner.src=information.image.bannerExternalUrl
+        channelBanner.alt=`Banner of ${information.channel.title}`
+        channelBanner.width="100vw"
         channelSubsCount.innerText=`${descrption.items[0].statistics.subscriberCount} subs`
     } catch (error) {
         console.error(error);
